@@ -1,0 +1,223 @@
+{
+  "_instructions": "Add your projects here. Each project should showcase your work.",
+  "sectionTitle": "Featured Projects",
+  "projects": [
+    {
+      "title": "JustTemaki",
+      "description": "Fullstack Capstone Project ",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/JustTemaki",
+      "demo": "https://github.com/Twinkledev1/JustTemaki"
+    },
+    {
+      "title": "realtime_frauddetection_system",
+      "description": "Interactive application built for continuous learning",
+      "technologies": [
+        "Python",
+        "Makefile",
+        "HTML",
+        "Dockerfile",
+        "Mako"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/realtime_frauddetection_system",
+      "demo": "https://github.com/Twinkledev1/realtime_frauddetection_system"
+    },
+    {
+      "title": "uber-data-engineering-mage-project",
+      "description": "Hands-on learning experience with modern frameworks",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/uber-data-engineering-mage-project",
+      "demo": "https://github.com/Twinkledev1/uber-data-engineering-mage-project"
+    },
+    {
+      "title": "supply-chain-dashboard",
+      "description": "Educational project for mastering software architecture",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/supply-chain-dashboard",
+      "demo": "https://github.com/Twinkledev1/supply-chain-dashboard"
+    },
+    {
+      "title": "agent-app",
+      "description": "AI-powered candidate job application app that collects profile and resume data, matches candidates to relevant jobs, and generates application auto-fill previews for faster submissions.",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/agent-app",
+      "demo": "https://github.com/Twinkledev1/agent-app"
+    },
+    {
+      "title": "brilliant-coaching-institute",
+      "description": "An online coaching platform where teachers can conduct live online classes, upload recorded video lectures, and manage courses, while students can access lessons anytime, track progress, and learn through structured course content.",
+      "technologies": [
+        "Python",
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/brilliant-coaching-institute",
+      "demo": "https://github.com/Twinkledev1/brilliant-coaching-institute"
+    },
+    {
+      "title": "AI-Secure-authentication-system",
+      "description": "Frontend and backend is used",
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/AI-Secure-authentication-system",
+      "demo": "https://github.com/Twinkledev1/AI-Secure-authentication-system"
+    },
+    {
+      "title": "AI-Receipe-App",
+      "description": "Developing a React Recipe App",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/AI-Receipe-App",
+      "demo": "https://github.com/Twinkledev1/AI-Receipe-App"
+    },
+    {
+      "title": "employee-directory",
+      "description": "Use of Express js",
+      "technologies": [
+        "JavaScript"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/employee-directory",
+      "demo": "https://github.com/Twinkledev1/employee-directory"
+    },
+    {
+      "title": "fitness-trackr-pro",
+      "description": "In this application we used the react router",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/fitness-trackr-pro",
+      "demo": "https://github.com/Twinkledev1/fitness-trackr-pro"
+    },
+    {
+      "title": "paint-sample",
+      "description": "React Router used for this web app",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/paint-sample",
+      "demo": "https://github.com/Twinkledev1/paint-sample"
+    },
+    {
+      "title": "secret-tunnel",
+      "description": "using form and POST method",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/secret-tunnel",
+      "demo": "https://github.com/Twinkledev1/secret-tunnel"
+    },
+    {
+      "title": "whack-a-mole",
+      "description": "prop-drilling concept",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/whack-a-mole",
+      "demo": "https://github.com/Twinkledev1/whack-a-mole"
+    },
+    {
+      "title": "my_node_app",
+      "description": "Simple Node.js app for learning how to create a web server.",
+      "technologies": [
+        "HTML",
+        "JavaScript"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/my_node_app",
+      "demo": "https://github.com/Twinkledev1/my_node_app"
+    },
+    {
+      "title": "html-css-mini-project",
+      "description": "CSS Project - Sidebar Menu",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/html-css-mini-project",
+      "demo": "https://github.com/Twinkledev1/html-css-mini-project"
+    },
+    {
+      "title": "Python-practice",
+      "description": "Python Program Practice",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/Python-practice",
+      "demo": "https://github.com/Twinkledev1/Python-practice"
+    },
+    {
+      "title": "OTP-Verification-System",
+      "description": "Developed a secure desktop application for One-Time Password (OTP) generation, email delivery, and verification.",
+      "technologies": [
+        "Python",
+        "HTML"
+      ],
+      "icon": "fas fa-brain",
+      "github": "https://github.com/Twinkledev1/OTP-Verification-System",
+      "demo": "https://github.com/Twinkledev1/OTP-Verification-System"
+    },
+    {
+      "title": "contribution-history",
+      "description": "Generated GitHub contribution history",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/contribution-history",
+      "demo": "https://github.com/Twinkledev1/contribution-history"
+    },
+    {
+      "title": "atomic-detection-pipeline",
+      "description": "Interactive application built for continuous learning",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/atomic-detection-pipeline",
+      "demo": "https://github.com/Twinkledev1/atomic-detection-pipeline"
+    },
+    {
+      "title": "supply-chain-analytics",
+      "description": "Personal project for exploring modern development practices",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "github": "https://github.com/Twinkledev1/supply-chain-analytics",
+      "demo": "https://github.com/Twinkledev1/supply-chain-analytics"
+    }
+  ]
+}

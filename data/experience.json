@@ -1,0 +1,37 @@
+{
+  "_instructions": "Add your work experience here. Copy the experience object for each job.",
+  "sectionTitle": "Professional Experience",
+  "experiences": [
+    {
+      "title": "Supply Chain Data Analyst",
+      "company": "Blue Yonder, CA, USA",
+      "period": "Mar 2025 - Present",
+      "location": "",
+      "description": "Improved forecast accuracy by 15% by analyzing historical demand patterns, seasonal trends, and variability using SQL datasets, supporting more reliable demand planning and inventory allocation decisions. Built Power BI dashboards tracking inventory turnover, fill rate, service level, and stockouts, providing clear visibility to planning teams and improving response to supply chain performance issues. Reduced excess inventory by 12% by identifying slow-moving items, analyzing demand variability, and adjusting stock allocation strategies across distribution centers while maintaining required service levels. Decreased manual reporting effort by 35% by automating recurring SQL-based data extraction, transformation, and reporting workflows, improving data consistency and enabling faster operational decision-making processes. Improved on-time delivery performance by 15% by analyzing shipment delays, supplier lead time variability, and order flow data, helping teams identify bottlenecks and improve logistics coordination effectively. Strengthened vendor performance tracking by analyzing delivery timelines, order accuracy, and lead time trends, supporting procurement teams in improving supplier reliability and replenishment planning processes. Used tools such as ChatGPT and Microsoft Copilot to support data interpretation, assist with SQL query structuring, and streamline report documentation, improving analysis efficiency and reducing turnaround time.",
+      "responsibilities": [
+        "Improved forecast accuracy by 15% by analyzing historical demand patterns, seasonal trends, and variability using SQL datasets, supporting more reliable demand planning and inventory allocation decisions",
+        "Built Power BI dashboards tracking inventory turnover, fill rate, service level, and stockouts, providing clear visibility to planning teams and improving response to supply chain performance issues",
+        "Reduced excess inventory by 12% by identifying slow-moving items, analyzing demand variability, and adjusting stock allocation strategies across distribution centers while maintaining required service levels",
+        "Decreased manual reporting effort by 35% by automating recurring SQL-based data extraction, transformation, and reporting workflows, improving data consistency and enabling faster operational decision-making processes",
+        "Improved on-time delivery performance by 15% by analyzing shipment delays, supplier lead time variability, and order flow data, helping teams identify bottlenecks and improve logistics coordination effectively",
+        "Strengthened vendor performance tracking by analyzing delivery timelines, order accuracy, and lead time trends, supporting procurement teams in improving supplier reliability and replenishment planning processes",
+        "Used tools such as ChatGPT and Microsoft Copilot to support data interpretation, assist with SQL query structuring, and streamline report documentation, improving analysis efficiency and reducing turnaround time"
+      ]
+    },
+    {
+      "title": "Associate Data Analyst (Operations / Supply Chain Support)",
+      "company": "Intex Technologies, India",
+      "period": "Mar 2020 - Feb 2023",
+      "location": "",
+      "description": "Increased product availability by 18% by analyzing inventory and sales data across warehouse and distribution networks, supporting better demand planning and inventory replenishment decisions across multiple product categories. Developed Excel-based reports using pivot tables and lookup functions to track stock levels, order fulfillment, and product movement, improving operational visibility and coordination across supply chain teams. Extracted, cleaned, and validated operational datasets using SQL, ensuring data accuracy and consistency for reporting, performance tracking, and decision-making across supply chain and business operations teams. Improved supplier performance by 10% by tracking delivery timelines, order accuracy, and lead time consistency, supporting procurement planning and strengthening supplier coordination across supply chain operations. Reduced excess and aging inventory by identifying slow-moving items using product-level trend analysis and stock aging data, supporting inventory optimization efforts across warehouse and distribution locations. Improved shipment tracking by analyzing logistics data, identifying delays, and supporting resolution efforts, enabling smoother order fulfillment and better coordination across supply chain and operations teams.",
+      "responsibilities": [
+        "Increased product availability by 18% by analyzing inventory and sales data across warehouse and distribution networks, supporting better demand planning and inventory replenishment decisions across multiple product categories",
+        "Developed Excel-based reports using pivot tables and lookup functions to track stock levels, order fulfillment, and product movement, improving operational visibility and coordination across supply chain teams",
+        "Extracted, cleaned, and validated operational datasets using SQL, ensuring data accuracy and consistency for reporting, performance tracking, and decision-making across supply chain and business operations teams",
+        "Improved supplier performance by 10% by tracking delivery timelines, order accuracy, and lead time consistency, supporting procurement planning and strengthening supplier coordination across supply chain operations",
+        "Reduced excess and aging inventory by identifying slow-moving items using product-level trend analysis and stock aging data, supporting inventory optimization efforts across warehouse and distribution locations",
+        "Improved shipment tracking by analyzing logistics data, identifying delays, and supporting resolution efforts, enabling smoother order fulfillment and better coordination across supply chain and operations teams"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "_instructions": "Add your education and certifications here.",
+  "sectionTitle": "Education & Certifications",
+  "certificationsTitle": "Certifications",
+  "education": [
+    {
+      "degree": "Master in Technology",
+      "school": "Harcourt Butler Technical University",
+      "institution": "Harcourt Butler Technical University",
+      "period": "Aug 2019 - Oct 2021",
+      "details": "",
+      "description": ""
+    },
+    {
+      "degree": "Bachelor of Engineering -ME",
+      "school": "Dr. A.P.J. Abdul Kalam Technical University",
+      "institution": "Dr. A.P.J. Abdul Kalam Technical University",
+      "period": "Aug 2014 - Jul 2018",
+      "details": "",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Microsoft Power BI Data Analyst (PL-300)",
+      "issuer": "Microsoft"
+    },
+    {
+      "name": "APICS CPIM",
+      "issuer": "APICS"
+    }
+  ]
+}

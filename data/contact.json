@@ -1,0 +1,62 @@
+{
+  "_instructions": "Contact section.",
+  "sectionTitle": "Get In Touch",
+  "contactInfo": [
+    {
+      "type": "email",
+      "icon": "fas fa-envelope",
+      "label": "Email",
+      "value": "tdevwanshi96@gmail.com",
+      "href": "mailto:tdevwanshi96@gmail.com"
+    },
+    {
+      "type": "phone",
+      "icon": "fas fa-phone",
+      "label": "Phone",
+      "value": "+1 341 314-8153",
+      "href": "tel:13413148153"
+    },
+    {
+      "type": "location",
+      "icon": "fas fa-map-marker-alt",
+      "label": "Location",
+      "value": "CA, USA",
+      "href": null
+    },
+    {
+      "type": "linkedin",
+      "icon": "fab fa-linkedin",
+      "label": "LinkedIn",
+      "value": "in/LinkedIn Profile",
+      "href": "https://www.linkedin.com/in/twinkle-devwanshi/"
+    }
+  ],
+  "form": {
+    "fields": [
+      {
+        "id": "name",
+        "type": "text",
+        "placeholder": "Your Name",
+        "required": true
+      },
+      {
+        "id": "email",
+        "type": "email",
+        "placeholder": "Your Email",
+        "required": true
+      },
+      {
+        "id": "message",
+        "type": "textarea",
+        "placeholder": "Your Message",
+        "rows": 5,
+        "required": true
+      }
+    ],
+    "submitButton": {
+      "text": "Send Message",
+      "type": "primary"
+    },
+    "successMessage": "Thank you for your message!"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_instructions": "About section content.",
+  "sectionTitle": "About Me",
+  "paragraphs": [
+    "Supply Chain Analyst with 4+ years of experience analyzing demand, inventory, and logistics data to support planning and improve operational performance. Skilled in SQL, Excel, and Power BI for evaluating forecast trends, tracking key metrics such as fill rate and service levels, and identifying gaps in supply chain execution.",
+    "Applies structured data analysis and basic forecasting methods to support inventory decisions, improve delivery performance, and enhance coordination across procurement, logistics, and warehouse operations."
+  ],
+  "statistics": [
+    {
+      "value": "1+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "2+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "10+",
+      "label": "Technologies"
+    }
+  ]
+}
