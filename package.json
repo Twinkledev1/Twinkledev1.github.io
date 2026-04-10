@@ -1,7 +1,7 @@
 {
-  "name": "adarsh-umesh-portfolio",
+  "name": "twinkledev1-github-io",
   "version": "1.0.0",
-  "description": "Professional portfolio website for Adarsh Umesh - Product Manager & Full-Stack Engineer",
+  "description": "Professional portfolio website for Twinkle Devwanshi - Supply Chain Analyst",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adarshumesh5/adarsh-umesh-portfolio.git"
+    "url": "https://github.com/Twinkledev1/Twinkledev1.github.io.git"
   },
   "keywords": [
     "portfolio",
@@ -21,10 +21,10 @@
     "resume",
     "personal-website"
   ],
-  "author": "Adarsh Umesh <connect2adarshum@gmail.com>",
+  "author": "Twinkle Devwanshi <tdevwanshi96@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adarshumesh5/adarsh-umesh-portfolio/issues"
+    "url": "https://github.com/Twinkledev1/Twinkledev1.github.io/issues"
   },
-  "homepage": "https://github.com/adarshumesh5/adarsh-umesh-portfolio#readme"
+  "homepage": "https://twinkledev1.github.io"
 }

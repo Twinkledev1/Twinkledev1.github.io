@@ -3,20 +3,20 @@
   "greeting": "Hi, I'm",
   "name": "Twinkle Devwanshi",
   "title": "Supply Chain Analyst",
-  "summary": "Supply Chain Analyst with 1+ years of experience specializing in SQL, Excel, Power BI.",
-  "avatarUrl": "/avatar.png",
+  "summary": "Supply Chain Analyst with 4+ years of experience turning demand, inventory, logistics, and supplier data into clearer planning decisions with SQL, Excel, and Power BI.",
+  "avatarUrl": "https://github.com/Twinkledev1.png",
   "highlights": [
     {
-      "icon": "fas fa-briefcase",
-      "text": "Professional Experience"
+      "icon": "fas fa-chart-line",
+      "text": "Forecast Accuracy"
     },
     {
-      "icon": "fas fa-code",
-      "text": "Technical Expertise"
+      "icon": "fas fa-database",
+      "text": "Inventory Visibility"
     },
     {
-      "icon": "fas fa-users",
-      "text": "Team Collaboration"
+      "icon": "fas fa-chart-pie",
+      "text": "Power BI Reporting"
     }
   ],
   "cta": {

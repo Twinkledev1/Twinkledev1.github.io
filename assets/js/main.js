@@ -1,6 +1,38 @@
 // ==========================================================================
 // Load Site Configuration (Meta Tags)
 // ==========================================================================
+function secureExternalLink(link) {
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+
+    if (href.startsWith('http')) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+    }
+}
+
+function formatProjectTitle(title) {
+    const acronyms = ['AI', 'API', 'CSS', 'HTML', 'OTP', 'SQL'];
+
+    return title
+        .replace(/[-_]+/g, ' ')
+        .split(' ')
+        .filter(Boolean)
+        .map(word => {
+            const upper = word.toUpperCase();
+            if (acronyms.includes(upper)) return upper;
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(' ');
+}
+
+function setMobileNavOpen(isOpen) {
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+}
+
 async function loadSiteConfig() {
     try {
         const response = await fetch('data/site-config.json');
@@ -44,7 +76,7 @@ async function loadNavigation() {
             // Re-attach event listeners for smooth scroll and mobile menu close
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
+                    setMobileNavOpen(false);
                 });
             });
         }
@@ -66,11 +98,32 @@ async function loadHero() {
         const heroName = document.getElementById('heroName');
         const heroTitle = document.getElementById('heroTitle');
         const heroSummary = document.getElementById('heroSummary');
+        const heroPortrait = document.getElementById('heroPortrait');
 
         if (heroGreeting) heroGreeting.textContent = hero.greeting;
         if (heroName) heroName.textContent = hero.name;
         if (heroTitle) heroTitle.textContent = hero.title;
         if (heroSummary) heroSummary.innerHTML = hero.summary;
+        if (heroPortrait && hero.avatarUrl) {
+            heroPortrait.innerHTML = '';
+            heroPortrait.classList.remove('is-fallback');
+            const img = document.createElement('img');
+            img.src = hero.avatarUrl;
+            img.alt = `${hero.name} profile photo`;
+            img.loading = 'eager';
+            img.decoding = 'async';
+            img.addEventListener('error', () => {
+                const initials = hero.name
+                    .split(' ')
+                    .filter(Boolean)
+                    .slice(0, 2)
+                    .map(part => part.charAt(0))
+                    .join('');
+                heroPortrait.innerHTML = initials;
+                heroPortrait.classList.add('is-fallback');
+            });
+            heroPortrait.appendChild(img);
+        }
 
         // Build highlights
         const highlightsContainer = document.getElementById('heroHighlights');
@@ -97,6 +150,7 @@ async function loadHero() {
                 a.className = `btn btn-${button.type}`;
                 if (button.external) a.target = '_blank';
                 a.innerHTML = button.icon ? `<i class="${button.icon}"></i> ${button.text}` : button.text;
+                secureExternalLink(a);
                 ctaContainer.appendChild(a);
             });
         }
@@ -108,9 +162,9 @@ async function loadHero() {
             hero.socialLinks.forEach(social => {
                 const a = document.createElement('a');
                 a.href = social.url;
-                a.target = '_blank';
                 a.setAttribute('aria-label', social.platform);
-                a.innerHTML = `<i class="${social.icon}"></i>`;
+                a.innerHTML = `<i class="${social.icon}"></i><span>${social.platform}</span>`;
+                secureExternalLink(a);
                 socialContainer.appendChild(a);
             });
         }
@@ -193,6 +247,7 @@ async function loadContact() {
                     </div>
                 `;
                 contactInfoContainer.appendChild(div);
+                secureExternalLink(div.querySelector('a'));
             });
         }
 
@@ -212,6 +267,7 @@ async function loadContact() {
             });
 
             formHTML += `<button type="submit" class="btn btn-${contact.form.submitButton.type}">${contact.form.submitButton.text}</button>`;
+            formHTML += '<p class="form-status" id="formStatus" role="status" aria-live="polite"></p>';
             formHTML += '</form>';
 
             formContainer.innerHTML = formHTML;
@@ -221,8 +277,22 @@ async function loadContact() {
             if (contactForm) {
                 contactForm.addEventListener('submit', (e) => {
                     e.preventDefault();
-                    alert(contact.form.successMessage);
-                    contactForm.reset();
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name') || 'Portfolio visitor';
+                    const email = formData.get('email') || '';
+                    const message = formData.get('message') || '';
+                    const status = document.getElementById('formStatus');
+                    const contactEmail = contact.contactInfo.find(info => info.type === 'email')?.value;
+
+                    if (!contactEmail) {
+                        if (status) status.textContent = 'Email is not configured yet.';
+                        return;
+                    }
+
+                    const subject = encodeURIComponent(`Portfolio message from ${name}`);
+                    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
+                    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+                    if (status) status.textContent = contact.form.successMessage;
                 });
             }
         }
@@ -252,8 +322,8 @@ async function loadFooter() {
             footer.links.forEach(link => {
                 const a = document.createElement('a');
                 a.href = link.url;
-                a.target = '_blank';
                 a.textContent = link.text;
+                secureExternalLink(a);
                 linksContainer.appendChild(a);
             });
         }
@@ -271,15 +341,21 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        setMobileNavOpen(!navMenu.classList.contains('active'));
     });
 }
 
 // Close mobile menu when a link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        setMobileNavOpen(false);
     });
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        setMobileNavOpen(false);
+    }
 });
 
 // ==========================================================================
@@ -291,11 +367,7 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
-    } else {
-        navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
-    }
+    if (navbar) navbar.classList.toggle('is-scrolled', currentScroll > 100);
 
     lastScroll = currentScroll;
 });
@@ -332,6 +404,7 @@ async function loadExperience() {
 
         const timeline = document.getElementById('experienceTimeline');
         const experiences = data.experiences || data; // Support both new and old format
+        if (timeline) timeline.innerHTML = '';
 
         (Array.isArray(experiences) ? experiences : [experiences]).forEach(exp => {
             // Skip instruction entries
@@ -380,6 +453,7 @@ async function loadSkills() {
 
         const skillsGrid = document.getElementById('skillsGrid');
         const categories = data.categories || data; // Support both new and old format
+        if (skillsGrid) skillsGrid.innerHTML = '';
 
         (Array.isArray(categories) ? categories : [categories]).forEach(category => {
             // Skip instruction entries
@@ -419,26 +493,30 @@ async function loadProjects() {
 
         const projectsGrid = document.getElementById('projectsGrid');
         const projects = data.projects || data; // Support both new and old format
+        if (projectsGrid) projectsGrid.innerHTML = '';
+        const projectList = Array.isArray(projects) ? projects : [projects];
+        const featuredProjects = projectList.filter(project => project.featured === true);
+        const visibleProjects = featuredProjects.length ? featuredProjects : projectList.slice(0, 6);
 
-        (Array.isArray(projects) ? projects : [projects]).forEach(project => {
+        visibleProjects.forEach(project => {
             // Skip instruction entries
             if (project._instructions) return;
 
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
 
-            const techBadges = project.technologies
+            const techBadges = (project.technologies || [])
                 .map(tech => `<span class="tech-badge">${tech}</span>`)
                 .join('');
 
             const links = [];
             if (project.github) {
-                links.push(`<a href="${project.github}" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View Code
+                links.push(`<a href="${project.github}" class="project-link">
+                    <i class="fab fa-github"></i> GitHub
                 </a>`);
             }
-            if (project.demo) {
-                links.push(`<a href="${project.demo}" target="_blank" class="project-link">
+            if (project.demo && project.demo !== project.github) {
+                links.push(`<a href="${project.demo}" class="project-link">
                     <i class="fas fa-external-link-alt"></i> Live Demo
                 </a>`);
             }
@@ -448,17 +526,18 @@ async function loadProjects() {
                     <i class="${project.icon || 'fas fa-code'}"></i>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">${project.title}</h3>
+                    <h3 class="project-title">${formatProjectTitle(project.title)}</h3>
                     <p class="project-description">${project.description}</p>
-                    <div class="project-tech">
+                    ${techBadges ? `<div class="project-tech">
                         ${techBadges}
-                    </div>
+                    </div>` : ''}
                     <div class="project-links">
                         ${links.join('')}
                     </div>
                 </div>
             `;
             projectsGrid.appendChild(projectCard);
+            projectCard.querySelectorAll('a').forEach(secureExternalLink);
         });
     } catch (error) {
         console.error('Error loading projects data:', error);
@@ -483,6 +562,8 @@ async function loadEducation() {
 
         const educationGrid = document.getElementById('educationGrid');
         const certGrid = document.getElementById('certGrid');
+        if (educationGrid) educationGrid.innerHTML = '';
+        if (certGrid) certGrid.innerHTML = '';
 
         // Load education items
         data.education.forEach(edu => {
@@ -511,7 +592,7 @@ async function loadEducation() {
             certItem.className = 'cert-item';
             certItem.innerHTML = `
                 <strong>${cert.name}</strong>
-                ${cert.issuer ? `<p style="font-size: 0.875rem; margin-top: 0.25rem; opacity: 0.8;">${cert.issuer}</p>` : ''}
+                ${cert.issuer ? `<p class="cert-issuer">${cert.issuer}</p>` : ''}
             `;
             certGrid.appendChild(certItem);
         });
@@ -592,9 +673,9 @@ window.addEventListener('scroll', () => {
 
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink.style.color = 'var(--primary-color)';
+                navLink.classList.add('is-active');
             } else {
-                navLink.style.color = '';
+                navLink.classList.remove('is-active');
             }
         }
     });

@@ -27,7 +27,7 @@
       "type": "linkedin",
       "icon": "fab fa-linkedin",
       "label": "LinkedIn",
-      "value": "in/LinkedIn Profile",
+      "value": "twinkle-devwanshi",
       "href": "https://www.linkedin.com/in/twinkle-devwanshi/"
     }
   ],
@@ -57,6 +57,6 @@
       "text": "Send Message",
       "type": "primary"
     },
-    "successMessage": "Thank you for your message!"
+    "successMessage": "Opening your email app with the message ready to send."
   }
 }

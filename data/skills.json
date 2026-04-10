@@ -4,61 +4,57 @@
   "sectionTitle": "Skills & Technologies",
   "categories": [
     {
-      "category": "Programming Languages",
-      "icon": "fas fa-code",
+      "category": "Data & Analytics",
+      "icon": "fas fa-database",
       "skills": [
-        "SQL"
+        "SQL",
+        "Exploratory Data Analysis",
+        "Data Validation",
+        "Data Transformation",
+        "Trend Analysis",
+        "Basic Predictive Analysis"
       ]
     },
     {
-      "category": "Tools & Platforms",
-      "icon": "fas fa-wrench",
+      "category": "BI & Automation",
+      "icon": "fas fa-chart-column",
       "skills": [
         "Excel",
         "Power BI",
-        "SAP",
-        "Oracle",
-        "ERP Systems",
-        "ChatGPT",
-        "Microsoft Copilot",
+        "Dashboard Development",
+        "KPI Tracking",
+        "Performance Reporting",
         "Reporting Automation",
         "Workflow Automation"
       ]
     },
     {
-      "category": "Technical Skills",
-      "icon": "fas fa-laptop-code",
+      "category": "Supply Chain Planning",
+      "icon": "fas fa-truck",
       "skills": [
         "Demand Forecasting",
         "Demand Planning",
         "Inventory Planning",
-        "Inventory Control",
         "Inventory Optimization",
         "Safety Stock",
         "Reorder Point",
         "Lead Time Analysis",
-        "Demand Variability",
-        "Service Level",
-        "Fill Rate",
-        "Inventory Turnover",
-        "Stock Replenishment",
+        "Stock Replenishment"
+      ]
+    },
+    {
+      "category": "Operations Systems",
+      "icon": "fas fa-gears",
+      "skills": [
+        "SAP",
+        "Oracle",
+        "ERP Systems",
         "Vendor Performance",
         "Procurement Support",
         "Logistics Coordination",
         "Distribution Operations",
-        "Dashboard Development",
-        "Data Visualization",
-        "KPI Tracking",
-        "Root Cause Analysis",
-        "Trend Analysis",
-        "Data Validation",
-        "Data Transformation",
-        "Performance Reporting",
-        "Trend-Based Forecasting",
-        "Moving Average Methods",
-        "Demand Pattern Analysis",
-        "Basic Predictive Analysis",
-        "Exploratory Data Analysis (EDA)"
+        "ChatGPT",
+        "Microsoft Copilot"
       ]
     }
   ]

@@ -7,6 +7,9 @@
     <meta name="author" content="" />
     <meta name="keywords" content="" />
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://github.com" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link
       rel="stylesheet"
@@ -20,7 +23,7 @@
         <div class="nav-brand">
           <a href="#home"></a>
         </div>
-        <button class="nav-toggle" id="navToggle">
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -35,6 +38,7 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
+          <div class="hero-portrait" id="heroPortrait"></div>
           <h1 class="hero-title">
             <span id="heroGreeting"></span> <span class="highlight" id="heroName"></span>
           </h1>

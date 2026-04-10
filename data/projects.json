@@ -1,18 +1,36 @@
 {
   "_instructions": "Add your projects here. Each project should showcase your work.",
-  "sectionTitle": "Featured Projects",
+  "sectionTitle": "Selected Projects",
   "projects": [
     {
-      "title": "JustTemaki",
-      "description": "Fullstack Capstone Project ",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/Twinkledev1/JustTemaki",
-      "demo": "https://github.com/Twinkledev1/JustTemaki"
+      "title": "supply-chain-dashboard",
+      "description": "Analytics dashboard focused on inventory, replenishment, and operational KPI visibility for supply chain planning.",
+      "technologies": [
+        "Python",
+        "Power BI",
+        "Supply Chain Analytics"
+      ],
+      "featured": true,
+      "icon": "fas fa-chart-line",
+      "github": "https://github.com/Twinkledev1/supply-chain-dashboard",
+      "demo": "https://github.com/Twinkledev1/supply-chain-dashboard"
+    },
+    {
+      "title": "uber-data-engineering-mage-project",
+      "description": "Data engineering pipeline using Mage-style orchestration patterns to prepare trip data for downstream analytics.",
+      "technologies": [
+        "Jupyter Notebook",
+        "Python",
+        "Data Engineering"
+      ],
+      "featured": true,
+      "icon": "fas fa-database",
+      "github": "https://github.com/Twinkledev1/uber-data-engineering-mage-project",
+      "demo": "https://github.com/Twinkledev1/uber-data-engineering-mage-project"
     },
     {
       "title": "realtime_frauddetection_system",
-      "description": "Interactive application built for continuous learning",
+      "description": "Real-time fraud detection workflow built to practice streaming-style analytics, model serving, and deployment fundamentals.",
       "technologies": [
         "Python",
         "Makefile",
@@ -20,30 +38,35 @@
         "Dockerfile",
         "Mako"
       ],
+      "featured": true,
       "icon": "fas fa-brain",
       "github": "https://github.com/Twinkledev1/realtime_frauddetection_system",
       "demo": "https://github.com/Twinkledev1/realtime_frauddetection_system"
     },
     {
-      "title": "uber-data-engineering-mage-project",
-      "description": "Hands-on learning experience with modern frameworks",
+      "title": "JustTemaki",
+      "description": "Full-stack capstone project covering application structure, user flows, and end-to-end implementation practice.",
       "technologies": [
-        "Jupyter Notebook",
-        "Python"
+        "Full Stack",
+        "Capstone"
       ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/Twinkledev1/uber-data-engineering-mage-project",
-      "demo": "https://github.com/Twinkledev1/uber-data-engineering-mage-project"
+      "featured": true,
+      "icon": "fas fa-layer-group",
+      "github": "https://github.com/Twinkledev1/JustTemaki",
+      "demo": "https://github.com/Twinkledev1/JustTemaki"
     },
     {
-      "title": "supply-chain-dashboard",
-      "description": "Educational project for mastering software architecture",
+      "title": "supply-chain-analytics",
+      "description": "Exploratory analytics project for demand patterns, inventory movement, and reporting workflows.",
       "technologies": [
-        "Python"
+        "Python",
+        "SQL",
+        "Analytics"
       ],
-      "icon": "fas fa-project-diagram",
-      "github": "https://github.com/Twinkledev1/supply-chain-dashboard",
-      "demo": "https://github.com/Twinkledev1/supply-chain-dashboard"
+      "featured": true,
+      "icon": "fas fa-chart-pie",
+      "github": "https://github.com/Twinkledev1/supply-chain-analytics",
+      "demo": "https://github.com/Twinkledev1/supply-chain-analytics"
     },
     {
       "title": "agent-app",
@@ -53,6 +76,7 @@
         "CSS",
         "HTML"
       ],
+      "featured": true,
       "icon": "fas fa-brain",
       "github": "https://github.com/Twinkledev1/agent-app",
       "demo": "https://github.com/Twinkledev1/agent-app"
